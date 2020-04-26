@@ -1,0 +1,65 @@
+{
+  "overrides": [
+	  {
+      "extends": [
+        "./tasks/.base.eslintrc",
+        "./tasks/.ts.eslintrc",
+        "./tasks/.vue.eslintrc"
+      ],
+      "files": [
+        "./src/**/*.vue"
+      ],
+      "parser": "vue-eslint-parser",
+      "parserOptions": {
+        "createDefaultProgram": true,
+        "ecmaFeatures": {
+          "jsx": true
+        },
+        "ecmaVersion": 2018,
+        "env": {
+          "browser": true,
+          "es6": true
+        },
+        "extraFileExtensions": [
+          ".vue"
+        ],
+        "parser": "@typescript-eslint/parser",
+        "sourceType": "module"
+      },
+      "plugins": [
+        "@typescript-eslint",
+        "vue"
+      ]
+    },
+    {
+      "env": {
+        "node": true
+      },
+      "extends": "./tasks/.base.eslintrc",
+      "files": [
+        "./**/*.js"
+      ],
+      "parserOptions": {
+        "ecmaVersion": 2015,
+        "sourceType": "module"
+      }
+    },
+    {
+      "extends": [
+        "./tasks/.base.eslintrc",
+        "./tasks/.ts.eslintrc"
+      ],
+      "files": [
+        "./**/*.ts"
+      ],
+      "parser": "@typescript-eslint/parser",
+      "plugins": [
+        "@typescript-eslint"
+      ]
+    }
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module"
+  }
+}
