@@ -1,12 +1,12 @@
 {
   "name": "rr-house",
-  "version": "0.0.1+alpha.0",
+  "version": "0.0.1+alpha.1",
   "description": "Simple & Beautiful homepage.",
   "main": "src/index.ts",
   "scripts": {
     "build": "webpack --progress --config ./tasks/webpack.development.js",
     "build:production": "webpack --progress --config ./tasks/webpack.production.js",
-    "build:development": "webpack-dev-server --progress --config ./tasks/webpack.development.js",
+    "build:development": "webpack-dashboard -- webpack-dev-server --progress --config ./tasks/webpack.development.js",
     "lint": "eslint ./**/*.{js,ts,vue} --format table",
     "lint:ts": "eslint ./**/*.ts --format table",
     "lint:js": "eslint ./**/*.js --format table",

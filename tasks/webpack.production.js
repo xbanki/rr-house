@@ -20,12 +20,12 @@ const UniversalConfiguration = require('./webpack.universal');
 
 const banner = {
 	banner: `/*!
- *  @project        go.enjoyit.ee
+ *  @project        rrhouse.ee
  *  @name           [filebase]
  *  @author         xbanki <contact@xbanki.me>
  *  @build          ${Moment().format('llll')} ET
  *  @release        ${Git.long()} [${Git.branch()}]
- *  @copyright      Copyright (c) ${Moment().format('YYYY')} EnjoyIT OÜ
+ *  @copyright      Copyright (c) ${Moment().format('YYYY')} RR House
  */
 `,
 	entryOnly: true,

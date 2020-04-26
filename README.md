@@ -19,6 +19,7 @@ A simple but beautiful & well designed homepage comissioned by RRHouse, built on
  - run `npm i` to install all of Node.js dependencies
  - run `npm run build` to build the source files in to `./build` folder
  - Navigate to the build output folder using any file explorer, opening up `index.html` in your chosen web browser
+ - Or instead of making a one time build, instead of doing `npm run build` , run `npm run build:production` to start up a development server
 
 ## Script Reference ##
 
@@ -36,9 +37,11 @@ Rows marked with `Requires run: Yes` must use `npm run {command}` syntax to exec
 | `lint` | **Yes** | Code Quality | Runs [ESLint](https://eslint.org/) configurations on codebase, printing any warnings or errors in to console.
 | `lint:ts` | **Yes** | Code Quality | Same as above, but only running on [TypeScript](https://typescriptlang.org/) source files.
 | `lint:js` | **Yes** | Code Quality | Same as above, but only running on vanilla JavaScript source files.
+| `lint:vue` | **Yes** | Code Quality | Same as above, but only running on [Vue](https://vuejs.org/) single-file component source files.
 | `lint:fix` | **Yes** | Code Quality | Same as `npm run lint lint` , but fixes any suppored fixable rules.
 | `lint:fix:ts` | **Yes** | Code Quality | Same as above, but only running on [TypeScript](https://typescriptlang.org/) source files.
 | `lint:fix:js` | **Yes** | Code Quality | Same as above, but only running on vanilla JavaScript source files.
+| `lint:fix:vue` | **Yes** | Code Quality | Same as above, but only running on [Vue](https://vuejs.org/) single-file component source files.
 
 # License #
 
