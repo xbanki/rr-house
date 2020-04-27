@@ -1,12 +1,12 @@
 {
   "name": "rr-house",
-  "version": "0.0.1+alpha.1",
+  "version": "0.0.1+alpha.2",
   "description": "Simple & Beautiful homepage.",
   "main": "src/index.ts",
   "scripts": {
     "build": "webpack --progress --config ./tasks/webpack.development.js",
     "build:production": "webpack --progress --config ./tasks/webpack.production.js",
-    "build:development": "webpack-dashboard -- webpack-dev-server --progress --config ./tasks/webpack.development.js",
+    "build:development": "webpack-dev-server --progress --config ./tasks/webpack.development.js",
     "lint": "eslint ./**/*.{js,ts,vue} --format table",
     "lint:ts": "eslint ./**/*.ts --format table",
     "lint:js": "eslint ./**/*.js --format table",
@@ -47,7 +47,6 @@
     "css-loader": "^3.4.2",
     "cssnano": "^4.1.10",
     "eslint": "^6.8.0",
-    "eslint-plugin-html": "^6.0.0",
     "eslint-plugin-vue": "^6.2.2",
     "extract-loader": "^5.0.1",
     "file-loader": "^6.0.0",
@@ -64,7 +63,6 @@
     "vue-loader": "^15.9.1",
     "vue-template-compiler": "^2.6.11",
     "webpack-cli": "^3.3.11",
-    "webpack-dashboard": "^3.2.0",
     "webpack-dev-server": "^3.10.3",
     "webpack-merge": "^4.2.2"
   },
@@ -72,12 +70,11 @@
     "@babel/core": "^7.9.0",
     "animejs": "^3.1.0",
     "core-js": "^3.6.4",
+    "dotenv": "^8.2.0",
     "moment": "^2.24.0",
     "tailwindcss": "^1.3.5",
     "typescript": "^3.8.3",
     "vue": "^2.6.11",
-    "vue-router": "^3.1.6",
-    "vuex": "^3.3.0",
     "webpack": "^4.42.1"
   }
 }

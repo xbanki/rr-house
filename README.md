@@ -15,11 +15,13 @@ A simple but beautiful & well designed homepage comissioned by RRHouse, built on
 
  - Clone this repository using Git or download as zip
  - Open your favorite shell client
- - run `cd path/to/rr-house` inside of the client
- - run `npm i` to install all of Node.js dependencies
- - run `npm run build` to build the source files in to `./build` folder
+ - Run `cd path/to/rr-house` inside of the client
+ - Run `npm i` to install all of Node.js dependencies
+ - Run `npm run build` to build the source files in to `./build` folder
  - Navigate to the build output folder using any file explorer, opening up `index.html` in your chosen web browser
- - Or instead of making a one time build, instead of doing `npm run build` , run `npm run build:production` to start up a development server
+ - Or instead of doing `npm run build` , do the following:
+   - Duplicate `.env.example` , renaming the copy to `dev.env` and filling out the fields inside of it
+   - Run `npm run build:production` to start up a development server
 
 ## Script Reference ##
 

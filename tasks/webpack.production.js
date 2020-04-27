@@ -1,6 +1,7 @@
 /* eslint-disable prefer-named-capture-group */
 /* eslint-disable id-length */
 
+const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const WebpackMerge = require('webpack-merge');
 const AutoPrefixer = require('autoprefixer');
 const TerserPlugin = require('terser-webpack-plugin');
@@ -114,6 +115,11 @@ module.exports = WebpackMerge(UniversalConfiguration, {
 						}
 					}
 				]
+			},
+			{
+				include: PATH.resolve(process.cwd(), 'src/'),
+				test: /\.vue$/,
+				loader: 'vue-loader'
 			}
 		]
 	},
@@ -154,6 +160,7 @@ module.exports = WebpackMerge(UniversalConfiguration, {
 				from: PATH.resolve(process.cwd(), 'LICENSE')
 			}
 		]),
+		new VueLoaderPlugin,
 		new Webpack.BannerPlugin(banner)
 	]
 });
