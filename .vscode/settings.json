@@ -1,0 +1,71 @@
+{
+  "[html]": {
+    "editor.detectIndentation": false,
+    "editor.insertSpaces": true,
+    "editor.suggest.insertMode": "replace",
+    "editor.tabSize": 4
+  },
+  "[javascript]": {
+    "editor.detectIndentation": false,
+    "editor.insertSpaces": true,
+    "editor.tabSize": 4
+  },
+  "[javascriptreact]": {
+    "editor.detectIndentation": false,
+    "editor.insertSpaces": true,
+    "editor.tabSize": 4
+  },
+  "[json]": {
+    "editor.detectIndentation": false,
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2
+  },
+  "[jsonc]": {
+    "editor.detectIndentation": false,
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2
+  },
+  "[scss]": {
+    "editor.detectIndentation": false,
+    "editor.insertSpaces": true,
+    "editor.suggest.insertMode": "replace",
+    "editor.tabSize": 2
+  },
+  "[typescript]": {
+    "editor.detectIndentation": false,
+    "editor.insertSpaces": true,
+    "editor.tabSize": 4
+  },
+  "[typescriptreact]": {
+    "editor.detectIndentation": false,
+    "editor.insertSpaces": true,
+    "editor.tabSize": 4
+  },
+  "[vue-html]": {
+    "editor.detectIndentation": false,
+    "editor.insertSpaces": true,
+    "editor.tabSize": 4
+  },
+  "[vue-postcss]": {
+    "editor.detectIndentation": false,
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2
+  },
+  "[vue]": {
+    "editor.detectIndentation": false,
+    "editor.insertSpaces": true,
+    "editor.tabSize": 4
+  },
+  "[yaml]": {
+    "editor.quickSuggestions": {
+      "comments": false,
+      "editor.detectIndentation": false,
+      "editor.insertSpaces": true,
+      "editor.tabSize": 2,
+      "other": true,
+      "strings": true
+    }
+  },
+  "editor.detectIndentation": false,
+  "html.format.indentInnerHtml": true
+}

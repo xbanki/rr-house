@@ -1,7 +1,10 @@
 /* eslint-disable prefer-named-capture-group */
 /* eslint-disable id-length */
 
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const MiniCSSExtractPlugin = require('mini-css-extract-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
+const PurgeCSSPlugin = require('purgecss-webpack-plugin');
 const WebpackMerge = require('webpack-merge');
 const AutoPrefixer = require('autoprefixer');
 const TerserPlugin = require('terser-webpack-plugin');
@@ -12,6 +15,8 @@ const Webpack = require('webpack');
 const Moment = require('moment');
 const PATH = require('path');
 const Git = require('git-rev-sync');
+
+
 
 const {
 	CleanWebpackPlugin
@@ -67,22 +72,7 @@ module.exports = WebpackMerge(UniversalConfiguration, {
 				test: /\.s[ca]ss$/i,
 				use: [
 					{
-						loader: 'file-loader',
-						options: {
-							name: '[name].css'
-						}
-					},
-					{
-						loader: 'extract-loader'
-					},
-					{
 						loader: 'vue-style-loader'
-					},
-					{
-						loader: 'css-loader?-url',
-						options: {
-							sourceMap: false
-						}
 					},
 					{
 						loader: 'postcss-loader',
@@ -150,6 +140,11 @@ module.exports = WebpackMerge(UniversalConfiguration, {
 		filename: '[name].bundle.js'
 	},
 	plugins: [
+		new BundleAnalyzerPlugin({
+			analyzerMode: 'static',
+			reportFileName: 'bundle-report.html',
+			openAnalyzer: false
+		}),
 		new CleanWebpackPlugin({
 			cleanOnceBeforeBuildPatterns: PATH.resolve(process.cwd(), 'dist/'),
 			verbose: true,
@@ -160,6 +155,10 @@ module.exports = WebpackMerge(UniversalConfiguration, {
 				from: PATH.resolve(process.cwd(), 'LICENSE')
 			}
 		]),
+		new MiniCSSExtractPlugin({
+			path: PATH.resolve(process.cwd(), '/dist'),
+			filename: PATH.join('./css', '[name].[chunkhash].css')
+		}),
 		new VueLoaderPlugin,
 		new Webpack.BannerPlugin(banner)
 	]
