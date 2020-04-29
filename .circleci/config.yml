@@ -34,7 +34,7 @@ jobs:
           name: Running ESLint
           command: |
             mkdir -p ~/reports
-            npx eslint ./**/*.{js,ts,vue} --format unix --output-file ~/reports/eslint.log
+            npx eslint '**/*.{js,ts,vue}' --format unix --output-file ~/reports/eslint.log
           when: always
       - store_test_results:
           path: ~/reports
