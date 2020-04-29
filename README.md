@@ -36,6 +36,7 @@ Rows marked with `Requires run: Yes` must use `npm run {command}` syntax to exec
 | `build` | **Yes** | Compiling | Builds project contents once using [Webpack](https://webpack.js.org/) in development mode in to `./build/` folder.
 | `build:production` | **Yes** | Compiling | Builds codebase using [Webpack](https://webpack.js.org/) in production mode, minifying the output and splitting certain parts of the code in to smaller chunks.
 | `build:development` | **Yes** | Compiling | Builds project contents in watch mode using [Webpack](https://webpack.js.org/) in development mode, re-building once changes to the codebase are detected
+| `deploy` | **Yes** | Deployment | (Requires running `build:production`) Deploys contents from `/dist` folder on to gh-pages Git branch.
 | `lint` | **Yes** | Code Quality | Runs [ESLint](https://eslint.org/) configurations on codebase, printing any warnings or errors in to console.
 | `lint:ts` | **Yes** | Code Quality | Same as above, but only running on [TypeScript](https://typescriptlang.org/) source files.
 | `lint:js` | **Yes** | Code Quality | Same as above, but only running on vanilla JavaScript source files.
