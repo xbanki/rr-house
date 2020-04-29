@@ -1,6 +1,6 @@
 {
   "name": "rr-house",
-  "version": "0.0.1+alpha.7",
+  "version": "0.0.1+alpha.8",
   "description": "Simple & Beautiful homepage.",
   "main": "src/index.ts",
   "scripts": {
@@ -75,6 +75,7 @@
     "animejs": "^3.1.0",
     "core-js": "^3.6.4",
     "dotenv": "^8.2.0",
+    "gh-pages": "^2.2.0",
     "moment": "^2.24.0",
     "tailwindcss": "^1.3.5",
     "typescript": "^3.8.3",
