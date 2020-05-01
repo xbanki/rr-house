@@ -55,8 +55,8 @@ jobs:
             - $DEPLOY_KEY_FINGERPRINT
       - run:
           name: Building source in `production` mode
-		      command: npm run build:production
-      - run:
+          command: npm run build:production
+        - run:
           name: 'Removing production bundle analysis data'
           command: rm ./dist/bundle-report.html
       - run:
