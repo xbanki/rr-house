@@ -56,7 +56,7 @@ jobs:
       - run:
           name: Building source in `production` mode
           command: npm run build:production
-        - run:
+      - run:
           name: 'Removing production bundle analysis data'
           command: rm ./dist/bundle-report.html
       - run:
