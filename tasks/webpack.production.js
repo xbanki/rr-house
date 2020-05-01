@@ -4,7 +4,7 @@
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const MiniCSSExtractPlugin = require('mini-css-extract-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
-const PurgeCSSPlugin = require('purgecss-webpack-plugin');
+const PurgeCSSPlugin = require('@fullhuman/postcss-purgecss');
 const WebpackMerge = require('webpack-merge');
 const AutoPrefixer = require('autoprefixer');
 const TerserPlugin = require('terser-webpack-plugin');
@@ -31,7 +31,7 @@ const banner = {
  *  @author         xbanki <contact@xbanki.me>
  *  @build          ${Moment().format('llll')} ET
  *  @release        ${Git.long()} [${Git.branch()}]
- *  @copyright      Copyright (c) ${Moment().format('YYYY')} RR House
+ *  @copyright      Copyright (c) ${Moment().format('YYYY')} xbanki, RR House
  */
 `,
 	entryOnly: true,
@@ -69,17 +69,31 @@ module.exports = WebpackMerge(UniversalConfiguration, {
 			{
 				exclude: /node_modules/,
 				include: PATH.resolve(__dirname, '../src/'),
-				test: /\.s[ca]ss$/i,
+				test: /\.(sa|sc|c)ss$/i,
 				use: [
 					{
-						loader: 'vue-style-loader'
+						loader: MiniCSSExtractPlugin.loader
+					},
+					{
+						loader: 'css-loader'
+					},
+					{
+						loader: 'resolve-url-loader'
 					},
 					{
 						loader: 'postcss-loader',
 						options: {
 							plugins: [
-								AutoPrefixer({
-									grid: 'autoplace'
+								TailwindCSS,
+								PurgeCSSPlugin({
+									content: ['./src/**/*.html', './src/**/*.js', './src/**/*.ts', './src/**/*.vue'],
+
+									defaultExtractor: (content) => {
+										const broadMatches = content.match(/[^<>"'`\s]*[^<>"'`\s:]/g) || [];
+										const innerMatches = content.match(/[^<>"'`\s.()]*[^<>"'`\s.():]/g) || [];
+
+										return broadMatches.concat(innerMatches);
+									}
 								}),
 								CSSNano({
 									preset: [
@@ -91,7 +105,9 @@ module.exports = WebpackMerge(UniversalConfiguration, {
 										}
 									]
 								}),
-								TailwindCSS
+								AutoPrefixer({
+									grid: 'autoplace'
+								})
 							]
 						}
 					},
@@ -156,8 +172,9 @@ module.exports = WebpackMerge(UniversalConfiguration, {
 			}
 		]),
 		new MiniCSSExtractPlugin({
-			path: PATH.resolve(process.cwd(), '/dist'),
-			filename: PATH.join('./css', '[name].[chunkhash].css')
+			path: PATH.resolve(process.cwd(), '/dist/'),
+			filename: '[name].[hash].css',
+			chunkFilename: '[name].[chunkhash].css'
 		}),
 		new VueLoaderPlugin,
 		new Webpack.BannerPlugin(banner)

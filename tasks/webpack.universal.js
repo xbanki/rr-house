@@ -4,6 +4,17 @@ const PATH = require('path');
 module.exports = {
 	context: PATH.resolve(process.cwd()),
 	entry: './src/index.ts',
+	module: {
+		rules: [
+			{
+				test: /\.svg$/,
+				loader: 'svg-url-loader',
+				options: {
+					iesafe: true
+				}
+			}
+		]
+	},
 	output: {
 		libraryTarget: 'umd',
 		pathinfo: false
@@ -24,7 +35,8 @@ module.exports = {
 			'.ts',
 			'.js',
 			'.json',
-			'.vue'
+			'.vue',
+			'.html'
 		],
 		alias: {
 			'@': PATH.resolve(process.cwd(), 'src/'),

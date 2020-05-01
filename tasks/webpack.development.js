@@ -1,3 +1,4 @@
+/* eslint-disable prefer-named-capture-group */
 /* eslint-disable id-length */
 
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
@@ -49,7 +50,7 @@ module.exports = Webpackmerge(UniversalConfiguration, {
 				test: /\.ts$/
 			},
 			{
-				test: /\.s[ca]ss$/i,
+				test: /\.(sa|sc|c)ss$/i,
 				use: [
 					{
 						loader: 'vue-style-loader'
