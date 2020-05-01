@@ -58,7 +58,7 @@ jobs:
           command: npm run build:production
       - run:
           name: 'Removing production bundle analysis data'
-          command: rm ./dist/bundle-report.html
+          command: rm ./dist/report.html
       - run:
           name: 'Append banner data to js bundle'
           command: |
