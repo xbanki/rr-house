@@ -65,7 +65,10 @@ jobs:
             cat ./dist/main.bundle.js.LICENSE.txt >> ./dist/main.bundle.js
             rm ./dist/main.bundle.js.LICENSE.txt
       - run:
-          name: Deploy build output to https://xbanki.me/
+          name: Make `CNAME`
+          command: printf 'rrhouse.ee' > ./dist/CNAME
+      - run:
+          name: Deploy build output to https://rrhouse.ee/
           command: |
             git config --global user.name "Circle CI"
             git config --global user.email "bot@circleci.com"

@@ -7,7 +7,10 @@
 			Meie koduleht on hetkel uuendamisel.
 		</p>
 		<p class="lg:text-lg md:text-lg text-gray-600 text-sm xl:text-lg">
-			Rohkema informatsiooni jaoks, saadke meile meil aadressile: <a href="mailto: info@rrhouse.ee">info@rrhouse.ee</a>
+			Rohkema informatsiooni jaoks, saadke meile meil aadressile: <a href="mailto: info@rrhouse.ee"
+                class="mail-link">
+                info@rrhouse.ee
+            </a>
 		</p>
 		<img src="../svg/logo-symbol-gray.svg"
 			class="h-10 my-4 w-10">
@@ -27,6 +30,14 @@
 
     .heading {
         font-family: 'Poppins', sans-serif;
+    }
+
+    .mail-link {
+        transition: all linear 0.08s;
+
+        &:hover {
+            color: #cbd5e0;
+        }
     }
 </style>
 
