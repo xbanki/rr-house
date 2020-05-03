@@ -21,7 +21,7 @@
     ],
     "vue/attribute-hyphenation": [
       "warn",
-      "always"
+      "never"
     ],
     "vue/attributes-order": [
       "warn",

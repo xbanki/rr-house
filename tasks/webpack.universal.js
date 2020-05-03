@@ -1,3 +1,5 @@
+/* eslint-disable prefer-named-capture-group */
+
 const HTMLPlugin = require('html-webpack-plugin');
 const PATH = require('path');
 
@@ -11,6 +13,13 @@ module.exports = {
 				loader: 'svg-url-loader',
 				options: {
 					iesafe: true
+				}
+			},
+			{
+				test: /\.(png|jpe?g|gif)$/i,
+				loader: 'url-loader',
+				options: {
+					limit: 8192
 				}
 			}
 		]
