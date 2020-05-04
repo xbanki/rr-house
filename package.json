@@ -1,6 +1,6 @@
 {
   "name": "rr-house",
-  "version": "0.0.1+alpha.11",
+  "version": "0.0.1+alpha.12",
   "description": "Simple & Beautiful homepage.",
   "main": "src/index.ts",
   "scripts": {

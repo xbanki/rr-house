@@ -1,6 +1,10 @@
 <template>
 	<div class="absolute bg-gray-100 h-full min-h-full min-w-full overflow-hidden root w-full">
 		<div class="bg-white content-wrapper h-full lg:shadow-sm lg:w-4/5 mx-auto xl:shadow-sm xl:w-3/5">
+			<div class="fixed navbar z-10">
+				<img class="pl-6 pt-6 w-16"
+					src="../svg/logo-symbol-black.svg">
+			</div>
 			<component-hero/>
 			<div class="h-full items-wrapper w-full">
 				<div class="content-items float-left h-full w-8/12">
@@ -20,7 +24,15 @@
 <style lang="scss">
 	@import "tailwindcss/base";
 	@import "tailwindcss/components";
-	@import "tailwindcss/utilities";
+    @import "tailwindcss/utilities";
+
+    body, html {
+        scroll-behavior: smooth;
+        height: 100%;
+        width: 100%;
+    }
+
+    @import "../scss/index.scss";
 </style>
 
 <script lang="ts">
