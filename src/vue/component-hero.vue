@@ -15,11 +15,14 @@
 						<br>
 						kõrgeid ja kvaliteetseid standardeid kõigi nõudnikumate klientide ja projektidega.
 					</p>
+					<div class="bg-gray-700 h-1 mt-2 mx-auto rounded-full w-8"/>
 					<div class="pt-4">
-						<button class="heading hero-button mr-2">
+						<button class="heading hero-button mr-2"
+							v-on:click="scrollToChapter('foo')">
 							Huvitatud? Räägime
 						</button>
-						<button class="heading hero-button ml-2">
+						<button class="heading hero-button ml-2"
+                            v-on:click="scrollToChapter('bar')">
 							Loe Lähemalt
 						</button>
 					</div>
@@ -46,21 +49,6 @@
             }
         }
     }
-
-    button {
-        &.hero-button {
-            @apply border-3 border-teal-400 duration-100 ease-in-out px-4 py-2 rounded-none text-base text-teal-400 transition;
-
-            &:hover {
-                @apply border-teal-200 text-teal-200;
-            }
-
-            &:focus, &:active {
-                @apply border-teal-300 text-teal-300 rounded-none;
-                outline: none !important;
-            }
-        }
-    }
 </style>
 
 <script lang="ts">
@@ -77,6 +65,11 @@
            };
 
            return data;
+        },
+        methods: {
+            scrollToChapter(chapterName: string): void {
+                return console.error(chapterName);
+            }
         }
 	};
 </script>

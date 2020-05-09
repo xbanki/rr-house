@@ -112,3 +112,6 @@ todo*
 
 # Android build output
 android/
+
+# TailwindCSS config
+tailwind.config.js

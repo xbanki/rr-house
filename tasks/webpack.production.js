@@ -161,11 +161,14 @@ module.exports = WebpackMerge(UniversalConfiguration, {
 			reportFileName: 'bundle-report.html',
 			openAnalyzer: false
 		}),
-		new CleanWebpackPlugin({
-			cleanOnceBeforeBuildPatterns: PATH.resolve(process.cwd(), 'dist/'),
-			verbose: true,
-			dry: false
-		}),
+
+		/*
+		 * New CleanWebpackPlugin({
+		 * 	cleanOnceBeforeBuildPatterns: PATH.resolve(process.cwd(), 'dist/'),
+		 * 	verbose: true,
+		 * 	dry: false
+		 * }),
+		 */
 		new CopyPlugin([
 			{
 				from: PATH.resolve(process.cwd(), 'LICENSE')
