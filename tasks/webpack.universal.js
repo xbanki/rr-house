@@ -30,7 +30,7 @@ module.exports = {
 	},
 	plugins: [
 		new HTMLPlugin({
-			filename: 'preview.html',
+			filename: 'index.html',
 			inject: true,
 			publicPath: './',
 			template: 'src/html/template.html'
