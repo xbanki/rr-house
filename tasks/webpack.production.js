@@ -47,7 +47,7 @@ module.exports = WebpackMerge(UniversalConfiguration, {
 				include: PATH.resolve(__dirname, '../src/'),
 				loader: 'babel-loader',
 				options: {
-					plugins: ['@babel/plugin-proposal-class-properties', '@babel/plugin-proposal-object-rest-spread'],
+					plugins: ['@babel/plugin-proposal-class-properties', '@babel/plugin-proposal-object-rest-spread', '@babel/plugin-transform-typescript'],
 					presets: [
 						[
 							'@babel/preset-env',
@@ -56,11 +56,17 @@ module.exports = WebpackMerge(UniversalConfiguration, {
 									version: 3,
 									proposals: true
 								},
-								modules: false,
+								targets: '> 0.25%, not dead',
 								useBuiltIns: 'usage'
 							}
 						],
-						'@babel/preset-typescript'
+						[
+							'@babel/preset-typescript',
+							{
+								allowDeclareFields: true,
+								onlyRemoveTypeImports: true
+							}
+						]
 					]
 				},
 				test: /\.ts$/
@@ -162,13 +168,12 @@ module.exports = WebpackMerge(UniversalConfiguration, {
 			openAnalyzer: false
 		}),
 
-		/*
-		 * New CleanWebpackPlugin({
-		 * 	cleanOnceBeforeBuildPatterns: PATH.resolve(process.cwd(), 'dist/'),
-		 * 	verbose: true,
-		 * 	dry: false
-		 * }),
-		 */
+
+		new CleanWebpackPlugin({
+			cleanOnceBeforeBuildPatterns: PATH.resolve(process.cwd(), 'dist/'),
+			verbose: true,
+			dry: false
+		 }),
 		new CopyPlugin([
 			{
 				from: PATH.resolve(process.cwd(), 'LICENSE')
