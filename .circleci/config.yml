@@ -64,9 +64,8 @@ jobs:
           command: |
             cat ./dist/main.bundle.js.LICENSE.txt >> /tmp/tmpfl
             rm ./dist/main.bundle.js.LICENSE.txt
-            echo -e '\n' >> /tmp/tmpfl
-            sed '1d' ./dist/main.bundle.js
-            cat ./dist/main.bundle.js >> /tmp/tmpfl
+            echo -e '' >> /tmp/tmpfl
+            sed '1d' ./dist/main.bundle.js >>  /tmp/tmpfl
             rm ./dist/main.bundle.js
             mv /tmp/tmpfl ./dist/main.bundle.js
       - run:
