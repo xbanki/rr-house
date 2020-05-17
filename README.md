@@ -1,9 +1,10 @@
 # RRHouse Company Homepage #
 
+![BuildStatus](https://img.shields.io/circleci/build/github/xbanki/rr-house?style=flat-square)
 ![Dependencies](https://img.shields.io/david/xbanki/rr-house?style=flat-square)
 ![License](https://img.shields.io/github/license/xbanki/rr-house?style=flat-square)
 
-A simple but beautiful & well designed homepage comissioned by RRHouse, built on top of Vue and TailwindCSS.
+A simple, beautiful & well designed homepage comissioned by RR House, built on top of Vue and TailwindCSS.
 
 # Table of Contents #
 
@@ -29,7 +30,7 @@ Below you will find a table containing all of the availlable [npm](https://nodej
 
 Each row inside of the table must have a command column, denoting what you actually have to run. For example, if we take the very first item in our table, we'd have to run `npm run build` .
 
-Rows marked with `Requires run: Yes` must use `npm run {command}` syntax to execute the script. Otherwise `run` keyword can be omitted.
+Rows marked with `Requires run: Yes` must use `npm run {command}` syntax to execute the script. Otherwise `run` flag can be omitted.
 
 | Command | Requires Run | Type | Description
 |---|---|---| --- |
@@ -48,4 +49,4 @@ Rows marked with `Requires run: Yes` must use `npm run {command}` syntax to exec
 
 # License #
 
-This repository is licensed under the [MIT License](./LICENSE).
+This repository is licensed under the [MIT License](./LICENSE). Copyright (C) 2020, xbanki & RR House.

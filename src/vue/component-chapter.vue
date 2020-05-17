@@ -1,7 +1,5 @@
 <template>
-	<div class="component-chapter">
-		{{ chapterData }}
-	</div>
+	<div class="component-chapter"/>
 </template>
 
 <script lang="ts">

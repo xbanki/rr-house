@@ -6,6 +6,13 @@
 
 <script lang="ts">
     export default {
-        name: 'component-navstrip'
+        name: 'component-navstrip',
+        props: {
+			chapters: {
+				type: Array,
+				default: null,
+				required: true
+			}
+		}
     };
 </script>

@@ -1,6 +1,6 @@
 <template>
-	<div class="absolute bg-gray-100 h-full min-h-full min-w-full overflow-hidden root w-full">
-		<div class="bg-white content-wrapper h-full lg:shadow-sm lg:w-4/5 mx-auto xl:shadow-sm xl:w-3/5">
+	<div class="bg-gray-100 h-full min-h-full min-w-full overflow-hidden relative root w-full z-10">
+		<div class="absolute bg-white content-wrapper h-full lg:w-4/5 mx-auto relative shadow-md top-0 xl:w-3/5">
 			<div class="fixed navbar z-10">
 				<img class="pl-6 pt-6 w-16"
 					src="../svg/logo-symbol-black.svg">
@@ -12,12 +12,13 @@
 						v-bind:key="chapter.internalId"
 						v-bind:chapterData="chapter"/>
 				</div>
-				<div class="float-right h-full nav-track w-4/12">
-					<component-navstrip/>
+				<div class="float-right h-full hidden lg:block nav-track w-4/12 xl:block">
+					<component-navstrip v-bind:chapters="this.$data.chapters"/>
 				</div>
 			</div>
 			<component-footer/>
 		</div>
+		<div class="absolute bg-brand-500 top-0 top-color-block w-full"/>
 	</div>
 </template>
 
@@ -30,6 +31,10 @@
         scroll-behavior: smooth;
         height: 100%;
         width: 100%;
+    }
+
+    .top-color-block {
+        height: 40rem;
     }
 
     @import "../scss/index.scss";

@@ -1,6 +1,7 @@
 <template>
 	<div class="bg-blue-600 component-hero relative w-full z-20">
 		<div class="absolute h-full hero-inner w-full">
+			<div class="absolute filter h-full w-full z-10"/>
 			<div class="fixed hero-header z-10">
 				<img class="pl-6 pt-6 w-16"
 					src="../svg/logo-symbol-white.svg">
@@ -10,10 +11,10 @@
 					<h1 class="heading text-4xl text-gray-100">
 						Professionaalne projekteerimine & ehitus
 					</h1>
-					<p class="text-gray-200 text-lg">
+					<p class="text-gray-100 text-lg">
 						Meil on kokku pea 18 aastat kogemust ehitus alal. Töötame professionaalselt, hoides üleval meie
 						<br>
-						kõrgeid ja kvaliteetseid standardeid kõigi nõudnikumate klientide ja projektidega.
+						kõrgeid ja kvaliteetseid standardeid kõigi nõudnikumate klientide ja projektide ees.
 					</p>
 					<div class="bg-gray-700 h-1 mt-2 mx-auto rounded-full w-8"/>
 					<div class="pt-4">
@@ -22,7 +23,7 @@
 							Huvitatud? Räägime
 						</button>
 						<button class="heading hero-button ml-2"
-                            v-on:click="scrollToChapter('bar')">
+							v-on:click="scrollToChapter('bar')">
 							Loe Lähemalt
 						</button>
 					</div>
@@ -37,6 +38,10 @@
 <style lang="scss" scoped>
     .component-hero {
         height: 40rem;
+
+        .filter {
+            background: rgba(3, 253, 182, 0.6);
+        }
 
         .hero-inner {
             clip: rect(0, auto, auto, 0);
