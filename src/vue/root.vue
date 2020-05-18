@@ -50,7 +50,7 @@
     import servicesContent from '@/html/chapter-services.html';
     import concactContent from '@/html/chapter-contact.html';
 
-    import { Chapter, getChapterContent } from '@/lib/chapter.ts';
+    import { Chapter } from '@/lib/chapter.ts';
 
 	export default {
 		name: 'root',
