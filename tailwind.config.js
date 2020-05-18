@@ -152,6 +152,10 @@ module.exports = {
       '48': '12rem',
       '56': '14rem',
       '64': '16rem',
+      '72': '22rem',
+      '128': '32rem',
+      '256': '64rem',
+      'extra': '42rem'
     },
     backgroundColor: theme => theme('colors'),
     backgroundPosition: {
@@ -685,7 +689,7 @@ module.exports = {
     strokeWidth: ['responsive'],
     tableLayout: ['responsive'],
     textAlign: ['responsive'],
-    textColor: ['responsive', 'hover', 'focus'],
+    textColor: ['responsive', 'hover', 'focus', 'group-hover', 'group-focus'],
     textDecoration: ['responsive', 'hover', 'focus'],
     textTransform: ['responsive'],
     userSelect: ['responsive'],

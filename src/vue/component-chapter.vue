@@ -1,5 +1,11 @@
+<!-- eslint-disable vue/no-v-html -->
+
 <template>
-	<div class="component-chapter"/>
+	<div v-bind:id="`chapter-${chapterData.htmlId}`"
+		class="component-chapter p-4 w-full"
+		v-html="chapterData.content">
+		{{ chapterData.title }}
+	</div>
 </template>
 
 <script lang="ts">
@@ -8,7 +14,7 @@
 		props: {
 
             /**
-             * Chapter data. see `root.vue` component for object property details.
+             * Chapter data. see `@/lib/chapter.ts` file for object property details.
              */
 			chapterData: {
 				type: Object,
