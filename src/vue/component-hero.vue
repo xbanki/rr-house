@@ -4,7 +4,7 @@
 			<div class="absolute filter h-full w-full z-10"/>
 			<div class="fixed hero-header z-10">
 				<img class="pl-6 pt-6 w-16"
-					src="../svg/logo-symbol-white.svg">
+					src="../img/svg/logo-symbol-white.svg">
 			</div>
 			<div class="absolute content-center flex flex-col h-full items-center justify-center text-center w-full z-10">
 				<div>

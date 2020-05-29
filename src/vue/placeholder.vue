@@ -12,7 +12,7 @@
 				info@rrhouse.ee
 			</a>
 		</p>
-		<img src="../svg/logo-symbol-gray.svg"
+		<img src="../img/svg/logo-symbol-gray.svg"
 			class="h-10 my-4 w-10">
 	</div>
 </template>

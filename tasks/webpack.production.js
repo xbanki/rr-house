@@ -177,6 +177,10 @@ module.exports = WebpackMerge(UniversalConfiguration, {
 		new CopyPlugin([
 			{
 				from: PATH.resolve(process.cwd(), 'LICENSE')
+			},
+			{
+				from: PATH.resolve(process.cwd(), './src/img/ico/*'),
+				flatten: true
 			}
 		]),
 		new MiniCSSExtractPlugin({

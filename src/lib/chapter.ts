@@ -31,7 +31,8 @@ export interface Chapter {
 	content?: string;
 
 	/**
-	 * `optional` - Icon which to display in the vertical navbar.
+	 * `optional` - Icon which to display in the vertical navbar. Has to be raw SVG
+	 * for us to animate color change in the UI.
 	 */
 	icon?: string;
 }

@@ -12,7 +12,8 @@ module.exports = {
 				test: /\.svg$/,
 				loader: 'svg-url-loader',
 				options: {
-					iesafe: true
+					iesafe: true,
+					stripdeclarations: true
 				}
 			},
 			{

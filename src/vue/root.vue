@@ -3,7 +3,7 @@
 		<div class="absolute bg-white content-wrapper h-full lg:w-256 mx-auto relative shadow-md top-0 xl:w-256">
 			<div class="fixed navbar z-10">
 				<img class="pl-6 pt-6 w-16"
-					src="../svg/logo-symbol-black.svg">
+					src="../img/svg/logo-symbol-black.svg">
 			</div>
 			<component-hero/>
 			<div class="h-full items-wrapper w-full">
@@ -50,6 +50,8 @@
     import servicesContent from '@/html/chapter-services.html';
     import concactContent from '@/html/chapter-contact.html';
 
+    import aboutIcon from '@/img/svg/logo-symbol-black.svg';
+
     import { Chapter } from '@/lib/chapter.ts';
 
 	export default {
@@ -66,6 +68,7 @@
                     chapterId: 1,
                     content: aboutContent,
                     htmlId: 'about',
+                    icon: aboutIcon,
                     title: ' Meie Ettevõttest'
                 },
                 {

@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/no-v-html -->
 <!-- eslint-disable vue/max-len -->
 <!-- eslint-disable max-len -->
 
@@ -13,7 +14,8 @@
 				<div class="duration-100 float-left group-focus:text-brand-600 group-hover:text-brand-400 h-16 heading leading-loose p-2 text-2xl text-gray-700 w-56">
 					{{ chapter.title }}
 				</div>
-				<div class="float-right h-16 w-16"/>
+				<svg class="float-right h-16 pr-8 py-4 w-16"
+					v-html="chapter.icon"/>
 			</div>
 		</div>
 	</div>
